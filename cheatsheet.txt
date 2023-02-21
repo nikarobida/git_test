@@ -3,16 +3,29 @@ Commands related to a remote repository:
     git push or git push origin main (Both accomplish the same goal in this context)
 
 Commands related to the workflow:
-    git add .
-    git commit -m "A message describing what you have done to make this snapshot different"
+    1. git add .
+    2. git commit -m "A message describing what you have done to make this snapshot different"
+    3. git push
 
 Commands related to checking status or log history
     git status
     git log
 
-The basic Git syntax is program | action | destination.
-For example,
+HOW TO START NEW REPOSITORY?
+    1. on GitHub create new repository and add README file
+    2. clone/copy repository on your computer by clicking on Code in your repository on GitHub
+        NOTE: You MUST click the SSH option to get the correct URL.
+    3. mkdir <name of your directory, that will contain repository>
+    4. move to that folder
+    5. terminal:
+        - git clone <copied link>
+        - check if everything is ok: git remote -v
 
-git add . is read as git | add | ., where the period represents everything in the current directory;
-git commit -m "message" is read as git | commit -m | "message"; and
-git status is read as git | status | (no destination).
+USE THE GIT WORKFLOW
+    - touch <name>.txt  <--- create new txt file
+    - git status <--- if name of file is colored red, means that file is not staged
+    - git add <name>.txt <--- adds file to staging area
+    - git status <--- color of file is now green 
+    - git commit -m "<message>" 
+    - git log <--- check history
+    - git push <--- uploads commits on github
